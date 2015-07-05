@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title> Sai Krishna Podduturi </title>
+
+		<meta name="description" content="Homework1" />
+
+		<meta name="author" content="Sai Krishna Podduturi" />
+
+		<meta name="keywords" content="Web Programming Languages, Homework1" />
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" href="firststyle.css" type="text/css" />
+		<style>
+			#dragdrop
+			{width:355px;height:relative;padding:10px;border:1px solid #aaaaaa;}
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<link href="styles/smart_cart.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="js/jquery.smartCart-2.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#SmartCart').smartCart();
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<nav>
+	
+			<ul>
+				<li><a href="#" selected>Member Nations:</a></li>
+				<li><a href="#">Spain</a></li>
+				<li><a href="#">England</a></li>
+				<li><a href="#">Germany</a></li>
+				<li><a href="#">Italy</a></li>
+			</ul>
+		</nav>
+
+		<section id="intro">
+
+			<header class="animate">
+				<script>
+					$(document).ready(function(){
+						$("header.animate").mouseenter(function(){
+							$("img.anime").animate({
+								right:'200px',
+								opacity:'0.3'
+							}, 2000);
+						$("header.animate").mouseleave(function(){
+							$("img.anime").stop(true);
+							});
+						});
+					});
+				</script>
+				<h2>Soccer in Europe</h2>
+				<p align="justify">Soccer is a sport played between two teams of eleven players with a spherical ball. 
+					It is played by 250 million players in over 200 countries, making it the world's most popular sport. 
+					The game is played on a rectangular field with a goal at each end. 
+					The object of the game is to score by getting the ball into the opposing goal.
+				</p>
+
+				<img class="anime" src="Images/fbd.jpg" alt="football">
+			</header>
+		</section>
+
+		<div id="content">
+			<div id="mainContent">
+				<section>
+					<article class="blogPost">
+						<header>
+							<h2>The Beautiful Game</h2>
+							<p>Posted on <time datetime="2015-02-08 20:00"> February 8th, 2015 </time> by Sai Krishna Podduturi - <a href="http://cs.utdallas.edu/">UTD CS Department</a> </p>
+						</header>
+						<div>
+							<p id="blurry" align="justify">In Soccer, the <b>goalkeepers</b> are the only players allowed to touch the ball with their hands or arms while it is in play and then only in their penalty area. 
+								Outfield players mostly use their feet to strike or pass the ball, but may use their head or torso to strike the ball instead. 
+								The team that scores the most goals by the end of the match wins. If the score is level at the end of the game, either a draw 
+								is declared or the game goes into extra time and/or a penalty shootout depending on the format of the competition. 
+								The Laws of the Game were originally codified in England by The Football Association in 1863. Association football is governed 
+								internationally by the International Federation of Association Football (FIFA; French: Federation Internationale de Football Association) 
+								which organises a World Cup every four years.
+							</p>
+							<script>
+								$(document).ready(function(){
+									$("#hide").click(function(){
+										$("figure.hidefigure").hide();
+									});
+									$("#show").click(function(){
+										$("figure.showfigure").show();
+									});
+								});
+							</script>
+							<h3><button id="hide" class="outofform">Most Recent World Cup Winners: </button></h3>
+							<figure class="hidefigure">
+								<img class="Germany" src="Images/wc14.jpg" alt="Germany" />
+								<figcaption><a href="http://en.wikipedia.org/wiki/2014_FIFA_World_Cup">FIFA World Cup 2014</a> Winners: 
+										<a href="http://www.cbsnews.com/news/world-cup-2014-germany-vs-argentina-final/">Germany</a></figcaption>
+							</figure>
+							<h3><button id="show" class="outofform">Wanna see the most valuable teams?</button></h3>
+							<script>
+								$("figure.showfigure").hide();
+							</script>
+							<figure class="showfigure" style="display:none">
+								<img src="Images/mvst.jpg" alt="Teams" usemap="#teams">
+								<map name="teams">
+									<area shape="rect" coords="0,0,107,160" alt="Manchester United" href="http://www.manutd.com/">
+									<area shape="rect" coords="107,0,209,160" alt="Real Madrid" href="http://www.realmadrid.com/en">
+									<area shape="rect" coords="209,72,285,160" alt="Barcelona" href="http://www.fcbarcelona.com/">
+									<area shape="rect" coords="209,0,285,72" alt="Arsenal" href="http://www.arsenal.com/home">
+								</map>
+								<figcaption> You can click on each logo to find out more about the respective clubs</figcaption>
+							</figure>
+							<script>
+								$(document).ready(function(){
+									$("#toggle").click(function(){
+										$("table").toggle();
+									});
+								});
+							</script>
+							<h3><button id="toggle" class="outofform">Let's find out the highest grossing clubs...</button></h3>
+							<script>
+								$(document).ready(function(){
+								    $("td.clrchng").mouseenter(function (e) {
+								        if(e.altKey) {
+								            $(this).css("background-color", "white");
+								           }
+								    });
+								    $("td.clrchng").mouseleave(function(evt){
+								        $(this).css("background-color", "#E8EA91");
+								    });
+								});
+							</script>
+							<script>
+								    function deleteRow(r) {
+									var i=r.parentNode.parentNode.rowIndex;
+									document.getElementById("grossing").deleteRow(i);
+								    }
+							</script>
+							<script>
+								function addrow() {
+					    				var table = document.getElementById("grossing");
+					    				var row = table.insertRow(1);
+					   				var c1 = row.insertCell(0);
+					    				var c2 = row.insertCell(1);
+									var c3=row.insertCell(2);
+									var c4=row.insertCell(3);
+									var c5=row.insertCell(4);
+					    				c1.innerHTML = "addedcell";
+					    				c2.innerHTML = "addedcell";
+									c3.innerHTML = "addedcell";
+									c4.innerHTML = "addedcell";
+									c5.innerHTML = "addedcell";
+								}
+							</script>
+
+							<table id="grossing">
+								<tr>
+									<th>Team</th>
+									<th>Current Value</th>
+									<th>Revenue(2012-13)</th>
+									<th>Operating Income(2012-13)</th>
+									<th>Delete Row??</th>
+								</tr>
+								<tr>
+									<td class="clrchng">Real Madrid</td>
+									<td class="clrchng">$3.44 bil.</td>
+									<td class="clrchng">$675 mil. </td>
+									<td class="clrchng">$172 mil. </td>
+									<td class="clrchng"><input type="button" onclick="deleteRow(this)" value="Delete?"></td>
+								</tr>
+								<tr>
+									<td class="clrchng">Barcelona</td>
+									<td class="clrchng">$3.2 bil.</td>
+									<td class="clrchng">$627 mil. </td>
+									<td class="clrchng">$154 mil. </td>
+									<td class="clrchng"><input type="button" onclick="deleteRow(this)" value="Delete?"></td>
+								</tr>
+								<tr>
+									<td class="clrchng">Manchester United</td>
+									<td class="clrchng">$2.81 bil.</td>
+									<td class="clrchng">$551 mil. </td>
+									<td class="clrchng">$165 mil. </td>
+									<td class="clrchng"><input type="button" onclick="deleteRow(this)" value="Delete?"></td>
+								</tr>
+								<tr>
+									<td class="clrchng">Bayern Munich</td>
+									<td class="clrchng">$1.85 bil.</td>
+									<td class="clrchng">$561 mil. </td>
+									<td class="clrchng">$122 mil. </td>
+									<td class="clrchng"><input type="button" onclick="deleteRow(this)" value="Delete?"></td>
+								</tr>
+								<tr>
+									<td class="clrchng">Arsenal</td>
+									<td class="clrchng">$1.33 bil.</td>
+									<td class="clrchng">$370 mil. </td>
+									<td class="clrchng">$38 mil. </td>
+									<td class="clrchng"><input type="button" onclick="deleteRow(this)" value="Delete?"></td>
+								</tr>
+							</table>
+							<br />
+							<p><button class="outofform" onclick="addrow()">Add row</button></p>
+						</div>
+					</article>
+				</section>
+			</div>
+			<aside>
+				<section>
+					<script>
+						$(document).ready(function(){
+							$("#fadein").dblclick(function(){
+								$("#infade").fadeIn();
+							});
+							$("#infade").dblclick(function(){
+								$("#infade").fadeOut();
+							});
+							$("#fadetoggle").dblclick(function(){
+								$("#togglefade").fadeToggle();
+							});
+						});
+					</script>
+					<ul>
+
+						<li class="selected" id="fadetoggle"><h3>Most Notable Competitions:</h3>
+						<p>Double click to fade in/out content</p>
+						<ol type="1" id="togglefade">
+							<li>
+								<dl>
+									<dt id="fadein">Champions League (Double click here to know more)</dt>
+									<dd id="infade" style="display:none">This is the league of champions! (Double click to hide this again) </dd>
+								</dl>
+							</li>
+							<li><a href="http://www.ligabbva.com/">Liga BBVA</a></li>
+							<li><a href="http://www.premierleague.com/en-gb.html">Premier League</a></li>
+							<li><a href="http://www.bundesliga.com/en/">Bundesliga</a></li>
+							<li><a href="http://www.legaseriea.it/en/">Serie A</a></li>
+						</ol></li>
+					</ul>
+
+				</section>
+				<section>
+					<script>
+						$(document).ready(function(){
+						    $("input.name").blur(function(){
+						        alert("Text: " + $("nav").text());
+							alert("HTML: " + $("nav").html());
+							alert($("a").attr("href"));
+						    });
+			    				$("input.age").change(function(){
+								alert("Value: " + $("input.age").val());
+								alert($("input.age").attr("placeholder"));
+							});
+			    				$("input.email").focus(function(){
+								$("#newfoc").text("Web Programming Languages");
+								$("#focus").html("<i> Fill the form</i>");
+								$("input.age").val("27");	
+							});
+						});
+					</script>
+
+					<header>
+						<h3 id="newfoc">Your Details??</h3>
+					</header>
+					<form name="details">
+						<p id="focus">Please enter your name: </p><br />
+						<input type="text" class="name" name="name" maxlength="10" required placeholder="Name" /><br />
+						<br />
+						Please select your gender: 
+						<input type="radio" name="sex" value="male" checked /> Male 
+						<input type="radio" name="sex" value="female" /> Female <br />
+						<br />
+						Please enter your age: 
+						<input type="number" class="age" size="2" name="age" min="12" max="99" value="21" /><br />
+						<br />
+						Please enter your email id: <br />
+						<input type="email" class="email" name="email" required placeholder="Enter a valid Email address" /> <br />
+						<br />
+						<button type="reset" value="Reset" id="submit">Reset</button>
+						<button type="submit" value="Submit" id="submit">Submit</button><br />
+					</form>
+				</section>
+				<section>
+					<script>
+					$(document).ready(function(){
+						$("#dragdrop").dblclick(function(){
+							$("#drag1").fadeTo("slow", 0.15);
+						});
+					});
+					</script>
+					<div id="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<p>Double click in this box to change the opacity of the image <br /></p>
+					</div>
+					<script>
+						function allowDrop(ev) {
+						    ev.preventDefault();
+						}
+	
+						function drag(ev) {
+						    ev.dataTransfer.setData("text", ev.target.id);
+						}
+	
+						function drop(ev) {
+						    ev.preventDefault();	
+						    var data = ev.dataTransfer.getData("text");
+						    ev.target.appendChild(document.getElementById(data));
+						}
+					</script>
+					<br />
+					<img id="drag1" src="Images/fbd.jpg" draggable="true" ondragstart="drag(event)" width="355" height="200">
+				</section>
+				<section id="comments">
+					<header>
+						<h3>Comments</h3>
+					</header>
+					<article>
+						<header>
+							<a href="#">John Doe</a> on <time datetime="2015-02-08 22:35:20">Feb 8th 2015 at 22:35</time> 
+						</header>
+						<br /><br />
+						<p> Good to know!! </p>
+					</article>
+				</section>
+				<section>
+					<header>
+						<h3>Effects</h3>
+					</header>
+					<article>
+						<p>Press the keyboard to see some effects: 
+							<input class="keypress" type="text" placeholder="Fading Effects"/>
+							<input class="keydown" type="text" placeholder="Animate Effects" />
+						</p>
+					</article>
+					<script>
+						$(document).ready(function(){
+							$("input.keypress").keypress(function(){
+								$("#drag1").fadeOut("slow").fadeIn("slow").fadeTo("slow", 0.15);
+							});
+						});
+					</script>
+					<script>
+						$(document).ready(function(){
+							$("input.keydown").keydown(function(){
+								$("#drag1").animate({
+									height:"toggle",
+									width:"toggle",
+									opacity:"0.9",
+								});
+							});
+							$("input.keydown").keyup(function(){
+								$("#drag1").stop(true);
+							});
+						});
+					</script>
+				</section>
+			</aside>
+
+		</div>
+		<section style="margin-left: 100px">
+			<header>
+				<h3>Merchandise</h3>
+			</header>
+			<table align="center" border="0" cellpadding="0" cellspacing="0">
+				
+<tr>
+					<td>
+						
+<form action="results.php" method="post">
+							<div id="SmartCart" class="scMain">
+								<input type="hidden" pimage="products/shirts.jpg" pprice="39.99" pdesc="Soccer Jerseys" pcategory="Jersey" pname="Shirts" pid="100">
+
+								<input type="hidden" pimage="products/scarfs.jpg" pprice="29.99" pdesc="Team Scarfs..." pcategory="Scarfs" pname="Scarfs" pid="101">
+
+								<input type="hidden" pimage="products/posters.jpg" pprice="19.99" pdesc="Some good posters!!" pcategory="Posters" pname="Posters" pid="102">
+
+								<input type="hidden" pimage="products/balls.jpg" pprice="10.99" pdesc="Footballs - the only thing that you need to play this game!" pcategory="Footballs" pname="Footballs" pid="103">
+
+							</div>
+						
+</form>
+					
+</td>
+				</tr>
+			
+</table>
+
+			<br />
+		</section>
+	
+		<footer>
+
+			<div>
+				<article class="blogPost">
+					<section id="kyl">
+						<p>You can find out your geolocation using the following button. <br /> <br />Know your location: <br /></p>
+						<button onclick="coordinates()" id="location">Click here to find out!!</button>
+						<p id="demo"></p>
+						<script>
+							var x = document.getElementById("demo");
+							function coordinates() {
+							    if (navigator.geolocation) {
+							        navigator.geolocation.getCurrentPosition(showPosition);
+							    } else { 
+							        x.innerHTML = "Geolocation is not supported by this browser.";
+							    }
+							}
+							function showPosition(position) {
+							    x.innerHTML = "Latitude: " + position.coords.latitude + 
+							    "<br>Longitude: " + position.coords.longitude;	
+							}
+						</script>
+					</section>
+					<section id="storage">
+						<script>
+							function Counter() {
+							    if(typeof(Storage) !== "undefined") {
+							        if (sessionStorage.clickcount) {
+							            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+							        } else {
+						        	    sessionStorage.clickcount = 1;
+							        }
+							        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+							    } else {
+							        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+							    }
+							}
+						</script>
+						<p>Click the button to see the counter increase.</p>
+						<p>Close the browser tab (or window), and try again, and the counter is reset.</p>			
+						<p><button onclick="Counter()" type="button" id="counter">Click me!</button>
+						<p id="result"></p>
+					</section>
+				</article>
+			</div>
+		</footer>
+
+	</body>
+
+</html>

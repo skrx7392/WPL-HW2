@@ -1,0 +1,406 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+body {
+	margin: 0 auto;
+	padding: 22px 0;
+	width: 940px;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background: #F0F0F0;
+}
+
+h1, h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+}
+
+p {
+	padding-bottom: 22px;
+}
+
+
+
+/*------------------------------
+=NAVIGATION
+------------------------------*/
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("Images/nav_background.png");
+}
+
+	nav ul {
+		margin: 0 auto;
+		width: 940px;
+		list-style: none;
+	}
+
+		nav ul li {
+			float: left;
+		}
+		
+			nav ul li a {
+				display: block;
+				margin-right: 20px;
+				width: 140px;
+				font-size: 14px;
+				line-height: 44px;
+				text-align: center;
+				text-decoration: none;
+				color: #777;
+			}
+			
+				nav ul li a:hover {
+					color: #fff;
+				}
+			
+			nav ul li.selected a {
+				color: #fff;
+			}			
+
+#intro {
+	position: relative;
+	margin-top: 66px;
+	padding: 44px;
+	background: black repeat-x;
+	
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+}
+
+	#intro h2, #intro p {
+		position: relative;
+		z-index: 9999;
+		width: 336px;
+	}
+	
+	#intro h2 {
+		padding: 0 0 22px 0;
+		font-weight: normal;
+		color: #fff;
+	}
+	
+	#intro p {
+		padding: 0;
+		color: #d9f499;
+	}
+	
+	#intro img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 653px;
+		height: 100%;
+	
+		-moz-border-radius: 22px;
+		-webkit-border-radius: 22px;
+	}
+
+#content {
+	display: table;
+}
+
+	#mainContent {
+		display: table-cell;
+		width: 620px;
+		padding-right: 22px;
+	}
+	
+	aside {
+		display: table-cell;
+		width: 300px;
+	}
+
+.blogPost header p, .blogPost header p a {
+		font-size: 14px;
+		font-style: italic;
+		color: #777;
+	}
+	
+		.blogPost header p a:hover {
+			text-decoration: none;
+			color: #000;
+		}
+	
+.blogPost img {
+	margin: 22px 0;
+	-webkit-box-shadow: 3px 3px 7px #777;
+}
+
+table, tr {
+   border: 0;
+}
+table {
+    width: 80%;
+	
+}
+
+th {
+    height: 50px;
+}
+td {
+    text-align: left;
+    background-color: #E8EA91;
+}
+
+th {
+    background-color:#000000;
+    color:#ffffff;
+}
+
+#comments {
+	margin-top: 21px;
+	padding-top: 22px;
+}
+
+	#comments article {
+		display: table;
+		padding: 22px;
+	}
+	
+	#comments article:nth-child(odd) {
+		padding: 21px;
+		background: #E3E3E3;
+		-moz-border-radius: 11px;
+		-webkit-border-radius: 11px;
+	}
+	
+		#comments article header {
+			display: table-cell;
+			width: 220px;
+			padding-right: 22px;
+		}
+		
+			#comments article header a {
+				display: block;
+				font-weight: bold;
+				color: #000;
+			}
+			
+				#comments article header a:hover {
+					text-decoration: none;
+				}
+		
+		#comments article p {
+			padding: 0;
+		}
+
+
+form {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: 1px;
+}
+
+	form p {
+		display: table;
+		margin-bottom: 22px;
+		padding: 0 22px;
+	}
+
+		form label {
+			display: table-cell;
+			width: 140px;
+			padding-right: 20px;
+			text-align: right;
+			font-weight: bold;
+			vertical-align: top;
+		}
+	
+		form input[type="text"], form input[type="email"]{
+			display: table-cell;
+			width: 300px;
+			height: 20px;
+			border: 1px solid #d7d7d7;
+		}
+		
+		form textarea {
+			width: 300px;
+			height: 100px;
+			border: 1px solid #d7d7d7;
+		}
+		
+		form button[type="submit"] {
+			margin-center: 162px;
+		}
+
+		form button[type="reset"] {
+			margin-left: 162px;
+		}
+
+aside section {
+	margin: 22px 0 0 22px;
+	padding: 11px 22px;
+	background: url("Images/sidebar_section_background.png") repeat-x;
+	
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+}
+
+	aside section ul {
+		margin: 0 0 0 22px;
+		list-style: none;
+	}
+	
+		aside section ul li a {
+			display: block;
+			text-decoration: none;
+			color: #000;
+		}
+		
+			aside section ul li a:hover {
+				text-decoration: underline;
+			}
+
+footer {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: #222;
+}
+
+	footer div {
+		display: table;
+		margin: 0 auto;
+		padding: 44px 0;
+		width: 940px;
+		color: #777;
+	}
+	
+		footer div section {
+			display: table-cell;
+			width: 300px;
+		}
+		
+		footer div #kyl, footer div #storage {
+			padding-right: 20px;
+		}
+		
+	footer h3 {
+		color: #FFF;
+	}
+	
+	footer a {
+		color: #999;
+	}
+	
+		footer a:hover {
+			color: #FFF;
+			text-decoration: none;
+		}
+	
+	footer ul {
+		margin: 0 0 0 40px;
+		list-style: square;
+		color: #565656;
+	}
+	
+		footer ul li a {
+			display: block;
+		}
+#kyl {
+	position: relative;
+	margin-left: 0;
+}
+
+#storage {
+	position: relative;
+	margin-right: 0;
+}
+
+#submit {
+	font-size: 15px;
+	margin-left: 15px;
+	background: linear-gradient(#FAFAFA 5%,  #585858 100%);
+	border: 1px solid #151515;
+	padding: 7px 35px;
+	color: white;
+	text-shadow: 0px 1px 0px #13506D;
+	font-weight: bold;
+	border-radius: 2px;
+	cursor: pointer;
+	width: 120px;
+	text-align: center;
+}
+
+#submit:hover{
+	background: linear-gradient(#FFFFFF 5%, #000000 100%);
+}
+
+button.outofform{
+	display: inline-block;
+	width: relative;
+	padding: 8px;
+	color: #ffffff;
+	border: 2px solid #fff;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	transition: background-color 0.2s ease-out, 
+			color 0.2s ease-out;
+}
+
+
+button.outofform:hover,
+button.outofform:active {
+	background-color: #fff;
+	color:#000;
+	transition: background-color 0.3s ease-in,
+			color 0.3s ease-in;
+}
+
+#location {
+	font-size: 15px;
+	margin-left: 15px;
+	background: linear-gradient(#FAFAFA 5%,  #585858 100%);
+	border: 1px solid #151515;
+	padding: 7px 35px;
+	color: white;
+	text-shadow: 0px 1px 0px #13506D;
+	font-weight: bold;
+	border-radius: 2px;
+	cursor: pointer;
+	width: relative;
+	text-align: center;
+}
+
+#location:hover{
+	background: linear-gradient(#FFFFFF 5%, #000000 100%);
+}
+
+#counter {
+	font-size: 15px;
+	margin-left: 15px;
+	background: linear-gradient(#FAFAFA 5%,  #585858 100%);
+	border: 1px solid #151515;
+	padding: 7px 35px;
+	color: white;
+	text-shadow: 0px 1px 0px #13506D;
+	font-weight: bold;
+	border-radius: 2px;
+	cursor: pointer;
+	width: relative;
+	text-align: center;
+}
+
+#counter:hover{
+	background: linear-gradient(#FFFFFF 5%, #000000 100%);
+}
